@@ -75,9 +75,16 @@ func (rs *RouteService) GetRoute(id string) (Route, error) {
 	var route Route
 	filter := bson.M{"_id": id}
 	err := rs.mongo.Database("routes").Collection("routes").FindOne(nil, filter).Decode(&route)
+<<<<<<< HEAD
 <<<<<<<< HEAD:internal/route.go
 	fmt.Printf("Found route: %+v\n", route)
 	return route, err
+=======
+	if err != nil {
+		return Route{}, err
+	}
+	return route, nil
+>>>>>>> ae52ca0 (Aula 4 - Golang Simulator)
 }
 ========
 	if err != nil {

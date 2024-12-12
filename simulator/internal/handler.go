@@ -87,4 +87,8 @@ func DeliveryStartedHandler(event *DeliveryStartedEvent, routeService *RouteServ
 		ch <- driverMovedEvent
 	}
 	return nil
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ae52ca0 (Aula 4 - Golang Simulator)
